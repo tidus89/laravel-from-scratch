@@ -15,6 +15,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('cards', function () {
-    return 'All Cards';
-});
+Route::get('cards', 'CardsController@index');
+
+Route::get('cards/{card}', 'CardsController@show');
